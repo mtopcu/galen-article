@@ -1,0 +1,6 @@
+@objects
+	hammer	css .figure
+
+= Compare the objects =
+		hammer:
+			image file ../dumps/hammer-dump/objects/hammer.png, error %4

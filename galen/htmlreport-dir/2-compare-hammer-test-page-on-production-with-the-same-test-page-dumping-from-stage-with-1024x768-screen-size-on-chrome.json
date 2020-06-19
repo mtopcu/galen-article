@@ -1,0 +1,55 @@
+{
+  "testId" : "2-compare-hammer-test-page-on-production-with-the-same-test-page-dumping-from-stage-with-1024x768-screen-size-on-chrome",
+  "name" : "Compare hammer test page on Production with the same test page dumping from Stage with 1024x768 screen size on Chrome",
+  "report" : {
+    "nodes" : [ {
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "wait 1m until visible \"css: .figure\"",
+        "status" : "info",
+        "time" : 1549026462708,
+        "type" : "node"
+      }, {
+        "name" : "check \"gspecs/hammer.gspec\"",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "Check layout: gspecs/hammer.gspec included tags: ",
+          "status" : "info",
+          "time" : 1549026463916,
+          "includedTags" : [ ],
+          "excludedTags" : [ ],
+          "sections" : [ {
+            "name" : "Compare the objects",
+            "place" : {
+              "filePath" : "gspecs/hammer.gspec",
+              "lineNumber" : 4
+            },
+            "objects" : [ {
+              "name" : "hammer",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "gspecs/hammer.gspec",
+                  "lineNumber" : 6
+                },
+                "name" : "image file ../dumps/hammer-dump/objects/hammer.png, error %4",
+                "highlight" : [ "hammer" ]
+              } ]
+            } ]
+          } ],
+          "objects" : {
+            "hammer" : {
+              "area" : [ 8, 8, 1008, 486 ]
+            }
+          },
+          "screenshot" : "layout-1-screenshot.png",
+          "type" : "layout"
+        } ],
+        "time" : 1549026463251,
+        "type" : "node"
+      } ],
+      "time" : 1549026461037,
+      "type" : "node"
+    } ]
+  }
+}

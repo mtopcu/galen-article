@@ -1,0 +1,5 @@
+Go into envs file and run one of the below commands to get server up.
+
+
+1- python -m SimpleHTTPServer 2222
+2- php -S localhost:2222

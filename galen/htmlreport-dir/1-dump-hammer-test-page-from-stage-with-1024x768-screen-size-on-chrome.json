@@ -1,0 +1,22 @@
+{
+  "testId" : "1-dump-hammer-test-page-from-stage-with-1024x768-screen-size-on-chrome",
+  "name" : "Dump hammer test page from Stage with 1024x768 screen size on Chrome",
+  "report" : {
+    "nodes" : [ {
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "wait 1m until visible \"css: .figure\"",
+        "status" : "info",
+        "time" : 1549026459140,
+        "type" : "node"
+      }, {
+        "name" : "dump \"gspecs/hammer.gspec\" --name \"hammer module\" --export dumps/hammer-dump",
+        "status" : "info",
+        "time" : 1549026459690,
+        "type" : "node"
+      } ],
+      "time" : 1549026456229,
+      "type" : "node"
+    } ]
+  }
+}

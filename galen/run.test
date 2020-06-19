@@ -1,0 +1,22 @@
+### Main test file to run all UI comparing tests ###
+@@ set
+	gridUrl    http://localhost:4444/wd/hub
+	stageUrl   http://192.168.76.18:2222/stage.html
+	prodUrl    http://192.168.76.18:2222/prod.html
+	size       1024x768
+
+@@ table modules
+	| module |
+	| hammer |
+
+@@ parameterized using modules
+Dump ${module} test page from Stage with ${size} screen size on Chrome
+	selenium grid ${gridUrl} --browser chrome --page "${stageUrl}" --size ${size}
+		wait 1m until visible "css: .figure"
+		dump "gspecs/${module}.gspec" --name "${module} module" --export dumps/${module}-dump
+
+@@ parameterized using modules
+Compare ${module} test page on Production with the same test page dumping from Stage with ${size} screen size on Chrome
+	selenium grid ${gridUrl} --browser chrome --page "${prodUrl}" --size ${size}
+		wait 1m until visible "css: .figure"
+		check "gspecs/${module}.gspec"
